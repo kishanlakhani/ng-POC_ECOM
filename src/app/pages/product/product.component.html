@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="row" *ngFor="let product of products">
+                <div class="column container" style="margin: 20px;">
+                        <div class="tab" id="{{product.id}}" style="background-color:white;">
+                                <div class="container image"  (click)="selectedColumn(product.id);">
+                                        <img src={{product.image}}>
+                                </div>
+                                <div class="content">
+                                        <button *ngIf="isClicked" (click)="deselectColumn(product.id)" class="close">&times;</button>
+                                        
+                                        <h2 *ngIf="isClicked">{{product.title}}</h2>
+                                        <br/>
+                                        <h5 *ngIf="isClicked">{{product.about}}</h5>
+                                        <br/>
+                                        <h5 *ngIf="isClicked"><a href="{{product.sallerUrl}}">click here for more infromation &#187;</a></h5>
+                                        <br/>
+                                        <h3 *ngIf="isClicked">{{product.price | currency:'INR'}}</h3>
+                                
+                                        <h3 *ngIf="!isClicked"  (click)="selectedColumn(product.id);">{{product.title}}</h3>
+                                        <br/>
+                                        <h6 *ngIf="!isClicked">{{product.about}}</h6>
+                                        <br/>
+                                        <h6 *ngIf="!isClicked"><a href="{{product.sallerUrl}}">click here for more infromation &#187;</a></h6>
+                                        <br/>
+                                        <h3 *ngIf="!isClicked">{{product.price | currency:'INR'}}</h3>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
