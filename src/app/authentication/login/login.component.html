@@ -1,7 +1,10 @@
 <div class="main-div">
     <div class="box">
         <form [formGroup]="login" (ngSubmit)="onLoginSubmit()">
-            <h1>Admin Login</h1>
+            <h1>Admin Login </h1>
+            <div class="alert alert-danger" *ngIf="error">
+                {{ error }}
+            </div>
             <div>
                 <input type="email" name="email" formControlName="email" placeholder="email">
                 <div *ngIf="login.controls['email'].errors && !login.controls['email'].untouched" class="error-msg">

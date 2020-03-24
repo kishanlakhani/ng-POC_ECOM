@@ -10,6 +10,7 @@ import { AdminService } from 'src/app/service/admin.service';
 })
 export class LoginComponent implements OnInit {
   login: FormGroup;
+  error:string;
   constructor(
     private router: Router,
     private adminService: AdminService
@@ -22,11 +23,21 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-
   onLoginSubmit() {
     console.log('click');
     console.log(this.login.value);
+    this.adminService.login(this.login.value).subscribe((res=>{
+      this.router.navigate(['','admin','dashboard']);
+      this.error = '';
+      this.login.reset();
+    })
+    ,((err)=>{
+      console.log(err.error.error.message);
+      this.error = err.error.error.message;
+      this.login.reset();
+
+      this.router.navigate(['','admin','auth','login']);
+    }));
   }
 
 }
