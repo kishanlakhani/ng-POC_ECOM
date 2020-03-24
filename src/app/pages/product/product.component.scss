@@ -1,0 +1,148 @@
+.tabnotselected{
+    display: none;
+}
+.tabselected{
+    display: block;
+    width: 100%;
+    left: 2%;
+    position: absolute;
+}
+.tab{
+    box-shadow: 0 0 4px gray;
+    width: 350px;
+    height: 400px;
+    display:flexbox;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    .close{
+        display: none;
+    }
+    h6{
+        color: gray;
+        a{
+            text-decoration: underline;
+            color: gray;
+        }
+    }
+    .image{
+        img{
+        max-height: 200px;
+        max-width: 200px;
+        }
+        // width: 30%;
+        // float: left;
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:5px 5px 5px 5px;
+    }
+
+    .content{
+        max-width: 300px;
+        max-height: 100px;
+        // float: right;
+    }
+}
+.list{
+    box-shadow: 0 0 4px gray;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .close{
+        display: none;
+    }
+    .btnhide{
+        display: none;
+    }
+    h6{
+        color: gray;
+        a{
+            text-decoration: underline;
+            color: gray;
+        }
+    }
+    .image{
+        img{
+        max-height: 200px;
+        max-width: 200px;
+        }
+        width: 30%;
+        float: left;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:5px 5px 5px 5px;
+    }
+
+    .content{
+        // max-width: 300px;
+        // max-height: 100px;
+        float: right;
+    }
+}
+
+.selected{
+    box-shadow: 0 0 7px black;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .close {
+        display:block;
+        font-size:50px;
+        color: black;
+        top:0%;
+        cursor: pointer;
+      }
+      .btnhide{
+          display: block;
+      }
+      h3{
+          margin-top: 50px;
+          color: blue;
+          font-size: xx-large;
+      }
+      h6{
+          color: gray;
+          font-size: large;
+          a{
+              text-decoration: underline;
+              color: gray;
+              font-size: large;
+          }
+      }
+      h4{
+          font-size: xx-large;
+      }
+      .image{
+        img{
+        max-height: 330px;
+        max-width: 330px;
+        }
+        width:30%;
+        float: left;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:5px 5px 5px 5px;
+    }
+
+    .content{
+        // max-height: 500px;
+        // max-width: 700px;
+        width: 70%;
+        float: right;
+        margin: 10px;
+    }
+
+}
