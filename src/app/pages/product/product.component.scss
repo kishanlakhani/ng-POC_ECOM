@@ -2,61 +2,69 @@
 .selected{
     box-shadow: 0 0 7px black;
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     .close {
-        font-size: xx-large;
-        text-decoration: none;
+        display:block;
+        font-size:40px;
+        color: black;
         top:0%;
         cursor: pointer;
-        padding: 12px 16px;
-        transform: translate(0%, -50%);
       }
 
-      h2{
+      h3{
+          margin-top: 50px;
           color: blue;
+          font-size: xx-large;
       }
-      h5{
+      h6{
           color: gray;
+          font-size: large;
           a{
               text-decoration: underline;
               color: gray;
+              font-size: large;
           }
+      }
+      h4{
+          font-size: xx-large;
       }
       .image{
         img{
-        max-height: 250px;
-        max-width: 250px;
+        max-height: 300px;
+        max-width: 300px;
         }
-        height: 100%;
-        width: 250px;
+        width:30%;
         float: left;
+        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px;
         border-radius:5px 5px 5px 5px;
-        padding: 10px;
     }
 
     .content{
         // max-height: 500px;
         // max-width: 700px;
+        width: 70%;
         float: right;
         margin: 10px;
     }
 
 }
 .tab{
-    box-shadow: 0 0 7px black;
+    box-shadow: 0 0 4px gray;
     width: 100%;
-    height: 100%;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .close{
+        display: none;
+    }
     h6{
         color: gray;
         a{
@@ -69,21 +77,18 @@
         max-height: 200px;
         max-width: 200px;
         }
-        height: 100%;
-        width: 200px;
+        width: 30%;
         float: left;
+        margin: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px;
         border-radius:5px 5px 5px 5px;
-        padding: 10px;
     }
 
     .content{
-        // max-height: 500px;
-        // max-width: 700px;
+        width: 70%;
         float: right;
-        margin: 10px;
+        margin: 15px;
     }
 }
