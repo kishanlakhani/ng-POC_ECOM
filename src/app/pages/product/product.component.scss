@@ -1,8 +1,94 @@
+.tabnotselected{
+    display: none;
+}
+.tabselected{
+    display: block;
+    width: 100%;
+    left: 0%;
+    position: absolute;
+}
+.tab{
+    box-shadow: 0 0 4px gray;
+    width: 350px;
+    height: 400px;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .close{
+        display: none;
+    }
+    h6{
+        color: gray;
+        a{
+            text-decoration: underline;
+            color: gray;
+        }
+    }
+    .image{
+        img{
+        max-height: 200px;
+        max-width: 200px;
+        }
+        // width: 30%;
+        // float: left;
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:5px 5px 5px 5px;
+    }
+
+    .content{
+        max-width: 300px;
+        max-height: 100px;
+        // float: right;
+    }
+}
+.list{
+    box-shadow: 0 0 4px gray;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .close{
+        display: none;
+    }
+    h6{
+        color: gray;
+        a{
+            text-decoration: underline;
+            color: gray;
+        }
+    }
+    .image{
+        img{
+        max-height: 200px;
+        max-width: 200px;
+        }
+        width: 30%;
+        float: left;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:5px 5px 5px 5px;
+    }
+
+    .content{
+        // max-width: 300px;
+        // max-height: 100px;
+        float: right;
+    }
+}
 
 .selected{
     box-shadow: 0 0 7px black;
     width: 100%;
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,42 +139,4 @@
         margin: 10px;
     }
 
-}
-.tab{
-    box-shadow: 0 0 4px gray;
-    width: 100%;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .close{
-        display: none;
-    }
-    h6{
-        color: gray;
-        a{
-            text-decoration: underline;
-            color: gray;
-        }
-    }
-    .image{
-        img{
-        max-height: 200px;
-        max-width: 200px;
-        }
-        width: 30%;
-        float: left;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius:5px 5px 5px 5px;
-    }
-
-    .content{
-        width: 70%;
-        float: right;
-        margin: 15px;
-    }
 }

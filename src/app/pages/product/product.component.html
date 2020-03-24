@@ -1,7 +1,52 @@
-<div class="container">
+<div style="display: flex;justify-content:space-evenly;">
+        <div></div>
+        <div></div>
+        <button class="btn btn-info" (click)="listview=true">List</button>
+        <button class="btn btn-info" (click)="listview=false">Grid</button>
+        <div></div>
+        <div></div>
+</div>
+<!-- Grid View -->
+<div class="row" *ngIf="!listview">
+        <div class="column" *ngFor="let product of products">
+                <div class="column tab" style="margin: 20px;">
+                        <div class="container image" (click)="selectedtab(product.id);">
+                                <img src={{product.image}}>
+                        </div>
+                        <div class="container content">
+                                <h5 (click)="selectedtab(product.id);">{{product.title}}
+                                </h5>
+                                <h5>{{product.price | currency:'INR'}}</h5>
+                        </div> 
+                </div>
+                <div id="{{product.id}}" class="column container tabnotselected">
+                        <div class="selected" style="background-color:white;">
+                                <div class="container image">
+                                        <img src={{product.image}}>
+                                </div>
+                                <div class="container content">
+                                        <button (click)="deselectedtab(product.id);" class="close">&times;</button>
+
+                                        <h3>{{product.title}}
+                                        </h3>
+                                        <br />
+                                        <h6>{{product.about}}</h6>
+                                        <br />
+                                        <h6><a href="{{product.sallerUrl}}">click here for more
+                                                        infromation
+                                                        &#187;</a></h6>
+                                        <br />
+                                        <h4>{{product.price | currency:'INR'}}</h4>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+<!-- List View -->
+<div class="container" *ngIf="listview">
         <div class="row" *ngFor="let product of products">
                 <div class="column container" style="margin: 20px;">
-                        <div class="tab" id="{{product.id}}" style="background-color:white;">
+                        <div class="list" id="{{product.id}}" style="background-color:white;">
                                 <div class="container image" (click)="selectedColumn(product.id);">
                                         <img src={{product.image}}>
                                 </div>
