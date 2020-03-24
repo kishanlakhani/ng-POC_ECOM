@@ -1,10 +1,9 @@
-<div style="display: flex;justify-content:space-evenly;">
-        <div></div>
-        <div></div>
-        <button class="btn btn-info" (click)="listview=true">List</button>
-        <button class="btn btn-info" (click)="listview=false">Grid</button>
-        <div></div>
-        <div></div>
+<div style="display: flex;justify-content:flex-end;margin-right: 300px;">
+        
+        <img src="/assets/list.png" style="width: 60px; height: 60px; margin: 10px;" (click)="listview=true">
+        <img src="/assets/menu.png" style="width: 60px; height: 60px; margin: 10px;" (click)="listview=false">
+        <!-- <button class="btn btn-info" (click)="listview=true">List</button>
+        <button class="btn btn-info" (click)="listview=false">Grid</button> -->
 </div>
 <!-- Grid View -->
 <div class="row" *ngIf="!listview">
@@ -37,6 +36,7 @@
                                                         &#187;</a></h6>
                                         <br />
                                         <h4>{{product.price | currency:'INR'}}</h4>
+                                        <button class="btn btn-primary">Visit Site</button>
                                 </div>
                         </div>
                 </div>
@@ -64,6 +64,7 @@
                                                         &#187;</a></h6>
                                         <br />
                                         <h4>{{product.price | currency:'INR'}}</h4>
+                                        <button class="btn btn-primary btnhide">Visit Site</button>
                                 </div>
                         </div>
                 </div>
