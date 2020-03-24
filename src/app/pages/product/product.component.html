@@ -9,17 +9,17 @@
 <!-- Grid View -->
 <div class="row" *ngIf="!listview">
         <div class="column" *ngFor="let product of products">
-                <div class="column tab" style="margin: 20px;">
+                <div class="tab" style="margin: 20px;">
                         <div class="container image" (click)="selectedtab(product.id);">
                                 <img src={{product.image}}>
                         </div>
                         <div class="container content">
                                 <h5 (click)="selectedtab(product.id);">{{product.title}}
                                 </h5>
-                                <h5>{{product.price | currency:'INR'}}</h5>
+                                <h5 style="bottom: 0;">{{product.price | currency:'INR'}}</h5>
                         </div> 
                 </div>
-                <div id="{{product.id}}" class="column container tabnotselected">
+                <div id="{{product.id}}" class="row column container tabnotselected">
                         <div class="selected" style="background-color:white;">
                                 <div class="container image">
                                         <img src={{product.image}}>

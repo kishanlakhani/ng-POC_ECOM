@@ -35,13 +35,13 @@ export class ProductComponent implements OnInit {
     document.getElementById(id).setAttribute('class','selected');
   }
   selectedtab(id){
-    document.getElementById(id).setAttribute('class','column container tabselected');
+    document.getElementById(id).setAttribute('class','row column container tabselected');
   }
   deselectColumn(id){
     this.isClicked=false;
     document.getElementById(id).setAttribute('class','list');
   }
   deselectedtab(id){
-    document.getElementById(id).setAttribute('class','column container tabnotselected');
+    document.getElementById(id).setAttribute('class','row column container tabnotselected');
   }
 }
