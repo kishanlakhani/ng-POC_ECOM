@@ -25,7 +25,8 @@ export class AdminService {
     }).pipe(map(res=>{
       console.log(res);
       if(res.hasOwnProperty('kind')){
-        sessionStorage.setItem('token',res['kind'].toString());
+        console.log(res['idToken'])
+        sessionStorage.setItem('token',res['idToken'].toString());
         console.log('it work')
       }
     }))
@@ -37,6 +38,14 @@ export class AdminService {
     }
     // this.router.navigate(['/admin/auth/login']);
     return false
+  }
+
+  getToken(){
+    let token =sessionStorage.getItem('token');
+    if(token){
+      return token 
+    }
+    return;
   }
 
   logout(){
